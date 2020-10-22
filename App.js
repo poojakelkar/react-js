@@ -10,7 +10,7 @@ render(){
     return(
         <div>
             <h1>Hello React</h1>
-            <button onClick={()=>press()}>Submit</button>
+            <button onClick={()=>press()}>Press Me</button>
         </div>
     )
 }
