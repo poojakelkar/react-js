@@ -4,11 +4,16 @@ import './App.css';
 class App extends React.Component{
 constructor(){
   super()
+  this.state={
+      name:"",
+      password:"",
+  }
 
 }
 
 press()
 {
+    if(this.state)
     alert("Form submit")
 }
 
