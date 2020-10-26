@@ -17,8 +17,9 @@ render()
     return(
         <div>
             <h1>Form validation</h1>
-            <input type="Email" placeholder="Enter Email ID"></input><br></br>
-            <input type="Password" placeholder="Enter Password"></input><br></br><br></br>
+            <input type="text" onChange={(event)=>{this.setState({name:event.target.value})}}/>
+            <p></p>
+            <input type="text" onChange={(event)=>{this.setState({password:event.target.value})}}/>
             <button onClick={()=>this.press()}>Press Me</button>
         </div>
     )
