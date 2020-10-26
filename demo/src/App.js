@@ -10,7 +10,9 @@ constructor(){
   }
 
 }
-
+submit(){
+    alert("submit")
+}
 
 render() 
 {
@@ -19,10 +21,12 @@ render()
             <h1>Form validation</h1>
             <input type="text" onChange={(event)=>{this.setState({name:event.target.value})}}/>
             <p></p>
-            <input type="text" onChange={(event)=>{this.setState({password:event.target.value})}}/>
-            <button onClick={()=>this.press()}>Press Me</button>
+            <input type="password" onChange={(event)=>{this.setState({password:event.target.value})}}/>
+            <p></p>
+            <button onClick={()=>this.submit()}>Submit</button>
         </div>
     )
 }
+
 }
 export default App;
