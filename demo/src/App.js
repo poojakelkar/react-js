@@ -11,17 +11,12 @@ constructor(){
 
 }
 
-press()
-{
-    if(this.state)
-    alert("Form submit")
-}
 
 render() 
 {
     return(
         <div>
-            <h1>Hello React</h1>
+            <h1>Form validation</h1>
             <input type="Email" placeholder="Enter Email ID"></input><br></br>
             <input type="Password" placeholder="Enter Password"></input><br></br><br></br>
             <button onClick={()=>this.press()}>Press Me</button>
