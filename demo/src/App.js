@@ -14,6 +14,9 @@ constructor(){
 }
 valid()
 {
+    if(!this.state.name.includes("@")){
+        this.setState({nameError:"Invalid Email ID"})
+    }
 
 }
 submit(){
@@ -30,7 +33,7 @@ render()
         <div>
             <h1>Form validation</h1>
             <input type="text" onChange={(event)=>{this.setState({name:event.target.value})}}/>
-            <p>nameError</p>
+            <p>{this.state.nameError}</p>
             <input type="password" onChange={(event)=>{this.setState({password:event.target.value})}}/>
             <p>passwordError</p>
             <button onClick={()=>this.submit()}>Submit</button>
