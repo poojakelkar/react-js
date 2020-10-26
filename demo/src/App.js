@@ -14,12 +14,27 @@ constructor(){
 }
 valid()
 {
-    if(!this.state.name.includes("@")){
+    if(!this.state.name.includes("@") && this.state.password.length<5){
+        this.setState({nameError:"Invalid Email ID",passwordError:"password is too short"})
+    }
+    else if(!this.state.name.includes("@")){
         this.setState({nameError:"Invalid Email ID"})
+    }
+    else if( this.state.password.length<5){
+        this.setState({passwordError:"password is too short"})
+    }
+    else{
+        return true
     }
 
 }
 submit(){
+    this.setState(
+        {
+            nameError:"",passwordError:""
+        }
+    )
+    
     if(this.valid())
     {
         alert("submit")
@@ -30,15 +45,15 @@ submit(){
 render() 
 {
     return(
-        <div>
+        <div style={{padding:"40px"}}>
             <h1>Form validation</h1>
             <input type="text" onChange={(event)=>{this.setState({name:event.target.value})}}/>
-            <p>{this.state.nameError}</p>
+            <p style={{color:"red",fontSize:"12px"}}>{this.state.nameError}</p>
             <input type="password" onChange={(event)=>{this.setState({password:event.target.value})}}/>
-            <p>passwordError</p>
+            <p style={{color:"red",fontSize:"12px"}}>{this.state.passwordError}</p>
             <button onClick={()=>this.submit()}>Submit</button>
         </div>
-    )
+    );
 }
 
 }
