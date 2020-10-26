@@ -7,11 +7,21 @@ constructor(){
   this.state={
       name:"",
       password:"",
+      nameError:"",
+      passwordError:"",
   }
 
 }
+valid()
+{
+
+}
 submit(){
-    alert("submit")
+    if(this.valid())
+    {
+        alert("submit")
+    }
+    
 }
 
 render() 
@@ -20,9 +30,9 @@ render()
         <div>
             <h1>Form validation</h1>
             <input type="text" onChange={(event)=>{this.setState({name:event.target.value})}}/>
-            <p></p>
+            <p>nameError</p>
             <input type="password" onChange={(event)=>{this.setState({password:event.target.value})}}/>
-            <p></p>
+            <p>passwordError</p>
             <button onClick={()=>this.submit()}>Submit</button>
         </div>
     )
