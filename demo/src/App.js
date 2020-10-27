@@ -30,7 +30,8 @@ class App extends React.Component {
     submit() {
         this.setState(
             {
-                nameError: "", passwordError: ""
+                nameError: "",
+                passwordError: "",
             }
         )
 
@@ -42,12 +43,12 @@ class App extends React.Component {
 
     render() {
         return (
-            <div style={{ padding:"10%",marginLeft:"25%"}}>
-                <h1>Form validation</h1>
-                <input type="text" onChange={(event) => { this.setState({ name: event.target.value }) }} />
-                <p style={{ color: "red", fontSize: "12px" }}>{this.state.nameError}</p>
-                <input type="password" onChange={(event) => { this.setState({ password: event.target.value }) }} />
-                <p style={{ color: "red", fontSize: "12px" }}>{this.state.passwordError}</p>
+            <div style={{ padding:"10%",marginLeft:"30%"}}>
+                <h1 style={{color:"blue"}}>Form validation</h1>
+                <input type="text" onChange={(event) => { this.setState({ name: event.target.value }) }} placeholder="Enter Your Email ID"/>
+                <p style={{ color: "red", fontSize: "15px" }}>{this.state.nameError}</p>
+                <input type="password" onChange={(event) => { this.setState({ password: event.target.value }) }} placeholder="Enter Password" />
+                <p style={{ color: "red", fontSize: "15px" }}>{this.state.passwordError}</p>
                 <button onClick={() => this.submit()}>Submit</button>
             </div>
         );
