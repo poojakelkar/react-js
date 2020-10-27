@@ -42,7 +42,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div style={{ padding: "center" }}>
+            <div style={{ padding:"10%",marginLeft:"25%"}}>
                 <h1>Form validation</h1>
                 <input type="text" onChange={(event) => { this.setState({ name: event.target.value }) }} />
                 <p style={{ color: "red", fontSize: "12px" }}>{this.state.nameError}</p>
