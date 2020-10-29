@@ -20,7 +20,7 @@ class App extends React.Component {
             this.setState({ nameError: "Invalid Email ID" })
         }
         else if (this.state.password.length < 5) {
-            this.setState({ passwordError: "Password is too short" })
+            this.setState({ passwordError: "Password length is too short" })
         }
         else {
             return true
