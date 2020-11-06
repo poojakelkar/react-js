@@ -1,2 +1,2 @@
 # react-js
-learn basic suyntax structure class, functions, methods
+learn basic syntax structure class, functions, methods
